@@ -45,11 +45,11 @@ namespace snakewindows
         {
             texture = base.Content.Load<Texture2D>("box");
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Texture2D greenbutton = Content.Load<Texture2D>("greenbutton");
+            Texture2D greenbutton = Content.Load<Texture2D>("greenbutton");// make the texture and link
             Texture2D redbutton = Content.Load<Texture2D>("redbutton");
-            s_visitor = new SetSpriteVisitor(greenbutton, redbutton);
+            s_visitor = new SetSpriteVisitor(greenbutton, redbutton);// send the texture to sprite
 
-            foreach(IButton b in ButtonList)
+            foreach(IButton b in ButtonList)// for each one in the list an sprite
             {
                 b.Visit(s_visitor);
             }
@@ -61,7 +61,7 @@ namespace snakewindows
            
         }
 
-        void reset()
+        void reset()// reset the game 
         {
             direction = 1;
             snakePos = new List<Vector2>();
@@ -74,7 +74,7 @@ namespace snakewindows
         
         protected override void Update(GameTime gameTime)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Up) && ldt != 1)
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) && ldt != 1)// Controle the snake through assigning the keys
                 direction = 0;
             else
                     if (Keyboard.GetState().IsKeyDown(Keys.Down) && ldt != 0)
@@ -89,10 +89,10 @@ namespace snakewindows
             {
                 
                 ldt = direction;
-
+                // making the tale goes after the head
                 for (int i = snakePos.Count - 1; i > 0; i--)
                     snakePos[i] = snakePos[i - 1];
-
+                // the result of every direction
                 if (direction == 0)
                     snakePos[0] += new Vector2(0, -1);
                 if (direction == 1)
@@ -101,7 +101,7 @@ namespace snakewindows
                     snakePos[0] += new Vector2(-1, 0);
                 if (direction == 3)
                     snakePos[0] += new Vector2(1, 0);
-
+                // collision the snake with food
                 if (snakePos[0].X == foodPos.X && snakePos[0].Y == foodPos.Y)
                 {
                     snakePos.Add(snakePos[snakePos.Count - 1]);
@@ -109,11 +109,11 @@ namespace snakewindows
                         r.Next(0, (GraphicsDevice.PresentationParameters.BackBufferWidth - 1) / 16),
                         r.Next(0, (GraphicsDevice.PresentationParameters.BackBufferHeight - 1) / 16));
                 }
-
+                //collision with itself
                 for(int i = 1; i < snakePos.Count; i++)
                     if (snakePos[0].X == snakePos[i].X && snakePos[0].Y == snakePos[i].Y)
                         reset();
-
+                // collision with border
                 if (snakePos[0].X * snakePos[0].Y < 0 || 
                     snakePos[0].Y + 1 > GraphicsDevice.PresentationParameters.BackBufferHeight / 16 || 
                     snakePos[0].X + 1 > GraphicsDevice.PresentationParameters.BackBufferWidth / 16)
@@ -127,7 +127,7 @@ namespace snakewindows
             {
               if (mousestate.X > 650 && mousestate.Y < 53)
                     Environment.Exit(0);
-              if (mousestate.X > 1 && mousestate.Y < 143)
+              if (mousestate.X < 144 && mousestate.Y < 50)
                     reset();
             }
             base.Update(gameTime);

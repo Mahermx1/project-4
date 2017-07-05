@@ -6,16 +6,16 @@ using System;
 
 namespace snakewindows
 {
-    //Simple Factory Design Pattern for spawning the blocks
+    //Simple Factory Design Pattern for spawning the buttons
     class ButtonFactory
     {
         public IButton Create(int id)
         {
-            if ((id == 1)) //if the id equals 1, make an instance of PointBlock
+            if ((id == 1)) //if the id equals 1, make an instance 
             {
-                return new GreenButton(new Vector2(1,1 ), Color.White);
+                return new GreenButton(new Vector2(1,1 ), Color.White);// return this class
             }
-            if ((id == 2)) //if the id equals 2, make an instance of BombBlock
+            if ((id == 2)) //if the id equals 2, make an instance 
             {
                 return new RedButton(new Vector2(650,1), Color.White);
             }
@@ -39,16 +39,16 @@ namespace snakewindows
             this.greenbutton = greenbutton;
             this.redbutton = redbutton;
         }
-        public void onGreen(GreenButton Button)
+        public void onGreen(GreenButton Button) // we make a sprite for green
         {
             Button.SetSprite(greenbutton);
         }
-        public void onRed(RedButton Button)
+        public void onRed(RedButton Button) // we make a sprite for red
         {
             Button.SetSprite(redbutton);
         }
     }
-    interface IButton //interface for the Blocks
+    interface IButton //interface for the buttons
     {
         void Draw(SpriteBatch spritebatch);
         void SetSprite(Texture2D texture);
@@ -107,4 +107,7 @@ namespace snakewindows
             spriteBatch.Draw(redbutton, position, color);
         }
     }
+    
+    
 }
+
