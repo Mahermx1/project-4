@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using System;
+
 namespace snakewindows
 {
     
@@ -13,7 +14,12 @@ namespace snakewindows
         Texture2D texture;
         List<Vector2> snakePos ;
         Vector2 foodPos;
+        SetSpriteVisitor s_visitor;
         Random r = new Random();
+        ButtonFactory buttonfactory = new ButtonFactory();
+        List<IButton> ButtonList = new List<IButton>();
+        private MouseState mousestate;
+        private MouseState PrevMouseState;       
         int direction = 1;
         int ldt = -1;
         int LastT = -1;
@@ -22,6 +28,8 @@ namespace snakewindows
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            ButtonList.Add(buttonfactory.Create(1));//Create an instance  
+            ButtonList.Add(buttonfactory.Create(2));//Create an instance 
         }
 
         
@@ -35,12 +43,19 @@ namespace snakewindows
        
         protected override void LoadContent()
         {
-            texture = base.Content.Load<Texture2D>("blank");
+            texture = base.Content.Load<Texture2D>("box");
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            Texture2D greenbutton = Content.Load<Texture2D>("greenbutton");
+            Texture2D redbutton = Content.Load<Texture2D>("redbutton");
+            s_visitor = new SetSpriteVisitor(greenbutton, redbutton);
 
+            foreach(IButton b in ButtonList)
+            {
+                b.Visit(s_visitor);
+            }
         }
 
-       
+
         protected override void UnloadContent()
         {
            
@@ -106,6 +121,15 @@ namespace snakewindows
 
                 LastT = (int)gameTime.TotalGameTime.TotalMilliseconds;
             }
+            PrevMouseState = Mouse.GetState();
+            mousestate = Mouse.GetState();
+            if (mousestate.LeftButton == ButtonState.Pressed && PrevMouseState.LeftButton == ButtonState.Pressed)
+            {
+              if (mousestate.X > 650 && mousestate.Y < 53)
+                    Environment.Exit(0);
+              if (mousestate.X > 1 && mousestate.Y < 143)
+                    reset();
+            }
             base.Update(gameTime);
         }
 
@@ -119,14 +143,19 @@ namespace snakewindows
             
 
             foreach(Vector2 pos in snakePos)
-                spriteBatch.Draw(texture, new Rectangle((int)pos.X*16, (int)pos.Y*16, 15, 15), new Color(50, 50, 255));
-            spriteBatch.Draw(texture, new Rectangle((int)foodPos.X * 16, (int)foodPos.Y * 16, 15, 15), Color.Black);
+                spriteBatch.Draw(texture, new Rectangle((int)pos.X*16, (int)pos.Y*16, 15, 15), Color.Blue);
+                spriteBatch.Draw(texture, new Rectangle((int)foodPos.X * 16, (int)foodPos.Y * 16, 15, 15), Color.Yellow);
 
-
+            foreach (var button in ButtonList)//for every block in the list...
+            {
+                button.Draw(spriteBatch);//call the method draw
+            }
             spriteBatch.End();
         
 
             base.Draw(gameTime);
         }
     }
+ 
 }
+

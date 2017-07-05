@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/maher/onedrive/documents/visual studio 2017/Projects/snakewindows/snakewindows/Content/box.png</SourceFile>
+  <SourceFile>C:/Users/maher/OneDrive/Documents/Visual Studio 2017/Projects/snakewindows/snakewindows/Content/box.png</SourceFile>
   <SourceTime>2017-06-29T12:43:53.5270405+02:00</SourceTime>
-  <DestFile>C:/Users/maher/onedrive/documents/visual studio 2017/Projects/snakewindows/snakewindows/Content/bin/Windows/box.xnb</DestFile>
-  <DestTime>2017-07-04T14:25:22.8791885+02:00</DestTime>
+  <DestFile>C:/Users/maher/OneDrive/Documents/Visual Studio 2017/Projects/snakewindows/snakewindows/Content/bin/Windows/box.xnb</DestFile>
+  <DestTime>2017-07-05T12:44:39.2163738+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

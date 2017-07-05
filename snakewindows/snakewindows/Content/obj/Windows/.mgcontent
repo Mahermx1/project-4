@@ -4,6 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Rogier/Documenten/project-4/snakewindows/snakewindows/Content/blank.png</File>
+    <File>C:/Users/maher/OneDrive/Documents/Visual Studio 2017/Projects/snakewindows/snakewindows/Content/box.png</File>
+    <File>C:/Users/maher/OneDrive/Documents/Visual Studio 2017/Projects/snakewindows/snakewindows/Content/greenbutton.png</File>
+    <File>C:/Users/maher/OneDrive/Documents/Visual Studio 2017/Projects/snakewindows/snakewindows/Content/redbutton.png</File>
   </SourceFiles>
 </SourceFileCollection>

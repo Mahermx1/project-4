@@ -61,21 +61,21 @@ namespace snakewindows
         private Color color;
         
 
-        public GreenButton(Vector2 position, Color color) : base() //constructor for creating the bombblock
+        public GreenButton(Vector2 position, Color color) : base() //constructor for creating 
         {
             this.position = position;
             this.color = color;
         }
 
-        public void Visit(IButtonVisitor v) //when visited, returns loads the sprite depending on the type of block, in this case an pointblock
+        public void Visit(IButtonVisitor v) //when visited, returns loads the sprite depending on the type of button
         {
-            v.onGreen(this); //needs help
+            v.onGreen(this); 
         }
         public void SetSprite(Texture2D greenbutton) //sets the sprite, so the sprite will be loaded
         {
             this.greenbutton = greenbutton;
         }
-        public void Draw(SpriteBatch spriteBatch) //method to draw the pointblock
+        public void Draw(SpriteBatch spriteBatch) //method to draw 
         {
             spriteBatch.Draw(greenbutton, position, color);
         }
@@ -87,21 +87,22 @@ namespace snakewindows
         private Texture2D redbutton;
         private Vector2 position;
         private Color color;
+        
 
-        public RedButton(Vector2 position, Color color) : base() //constructor for creating the bombblock
+        public RedButton(Vector2 position, Color color) : base() //constructor for creating 
         {
             this.position = position;
             this.color = color;
         }
-        public void Visit(IButtonVisitor v) //when visited, returns loads the sprite depending on the type of block, in this case an bombblock
+        public void Visit(IButtonVisitor v) //when visited, returns loads the sprite depending on the type of button
         {
-            v.onRed(this);//needs help
+            v.onRed(this);
         }
         public void SetSprite(Texture2D redbutton) //sets the sprite, so the sprite will be loaded
         {
             this.redbutton = redbutton;
         }
-        public void Draw(SpriteBatch spriteBatch) //method to draw the bombblock
+        public void Draw(SpriteBatch spriteBatch) //method to draw 
         {
             spriteBatch.Draw(redbutton, position, color);
         }

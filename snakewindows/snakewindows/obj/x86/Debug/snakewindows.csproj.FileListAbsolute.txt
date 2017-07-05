@@ -22,27 +22,6 @@ c:\users\maher\onedrive\documents\visual studio 2017\Projects\snakewindows\snake
 c:\users\maher\onedrive\documents\visual studio 2017\Projects\snakewindows\snakewindows\obj\x86\Debug\snakewindows.exe
 c:\users\maher\onedrive\documents\visual studio 2017\Projects\snakewindows\snakewindows\obj\x86\Debug\snakewindows.pdb
 c:\users\maher\onedrive\documents\visual studio 2017\Projects\snakewindows\snakewindows\bin\Windows\x86\Debug\Content\blank.xnb
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\Content\blank.xnb
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\snakewindows.exe
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\snakewindows.pdb
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\MonoGame.Framework.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.DXGI.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.XInput.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.Direct3D9.dll
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\MonoGame.Framework.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.DXGI.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.XInput.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\bin\Windows\x86\Debug\SharpDX.Direct3D9.xml
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\obj\x86\Debug\snakewindows.csprojResolveAssemblyReference.cache
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\obj\x86\Debug\snakewindows.exe
-D:\Rogier\Documenten\project-4\snakewindows\snakewindows\obj\x86\Debug\snakewindows.pdb
+C:\Users\maher\OneDrive\Documents\Visual Studio 2017\Projects\snakewindows\snakewindows\bin\Windows\x86\Debug\Content\box.xnb
+C:\Users\maher\onedrive\documents\visual studio 2017\Projects\snakewindows\snakewindows\bin\Windows\x86\Debug\Content\GreenButton.xnb
+C:\Users\maher\onedrive\documents\visual studio 2017\Projects\snakewindows\snakewindows\bin\Windows\x86\Debug\Content\RedButton.xnb
